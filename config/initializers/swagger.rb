@@ -1,0 +1,1 @@
+GrapeSwaggerRails.discoveryUrl = "/api/swagger_doc.json"

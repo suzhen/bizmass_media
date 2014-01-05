@@ -1,0 +1,19 @@
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
+
+%p
+  = image_tag @album.cover_url(:normal),:class=>"img-thumbnail"
+%p
+  %b 图集名称:
+  = @album.name
+%p
+  %b 图集分类:
+  = @album.category.name
+%p
+  %b 图集素材:
+- @materials_arr.each do |materials|
+  .row
+    - materials.each do |material|
+      - if material.present?
+        = render "booth",:material=>material

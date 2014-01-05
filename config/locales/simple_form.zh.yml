@@ -1,0 +1,39 @@
+zh:
+  simple_form:
+    required:
+      text: '必填'
+      mark: '*'
+    labels:
+      admin:
+        username: '用户名'
+        password: '密码'
+    hints:
+      admin:
+        username: 'User name to sign in.'
+        password: '请不要用特殊字符或者空格.'
+    placeholders:
+      admin:
+        username: 'admin@bizmass.com'
+        password: '****'
+    error_notification:
+      default_message: "请注意下面的问题:"
+    labels:
+       defaults:
+         password: '密码'
+         remember_me: '记着我'
+       user:
+         new:
+           email: 'E-mail登陆'
+         edit:
+           email: 'E-mail.'
+       category:
+           name: '名称'  
+       album:
+           name: '名称'
+           category: '分类'
+           cover: '封面'
+       material:
+           description: '描述'
+           image: '图片'
+           video: '视频'
+           album: '图集'

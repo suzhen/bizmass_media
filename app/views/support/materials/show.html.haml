@@ -1,0 +1,15 @@
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
+
+%p
+  %b 描述:
+  = @material.description
+%p
+  %b 图片:
+  = @material.image
+%p
+  %b 视频:
+  = @material.video
+
+

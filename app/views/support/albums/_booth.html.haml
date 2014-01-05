@@ -1,0 +1,9 @@
+.col-sm-6.col-md-4
+  .thumbnail
+    = image_tag material.image.url(:thumb)
+  .caption
+    %p
+      = material.description
+    %p
+      = link_to '修改', edit_material_path(material),:class=>"btn btn-primary",:role=>"button"
+      = link_to '删除', material, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-default",:role=>"button"

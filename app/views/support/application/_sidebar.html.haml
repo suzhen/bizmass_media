@@ -1,0 +1,10 @@
+.list-group
+  - if controller?("support/categories")
+    =submenu_link("分类列表", categories_path)
+    =submenu_link("新增分类", new_category_path)
+  - if controller?("support/albums")
+    =submenu_link("图集列表",albums_path)
+    =submenu_link("新增图集",new_album_path)
+  - if controller?("support/materials")
+    =submenu_link("素材列表",materials_path)
+    =submenu_link("新增素材",new_material_path)
