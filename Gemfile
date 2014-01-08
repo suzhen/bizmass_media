@@ -3,6 +3,8 @@ source "http://ruby.taobao.org"
 gem 'rails', '3.2.16'
 
 gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
+
 
 gem 'mysql2'
 
