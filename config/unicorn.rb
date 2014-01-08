@@ -15,7 +15,7 @@ stdout_path "#{Rails.root}/log/unicorn.stdout.log"
 
 listen 5000, :tcp_nopush => false
 
-listen "/tmp/unicorn.bizmss_media.sock"
+listen "/tmp/unicorn.bizmass_media.sock"
 worker_processes 2
 timeout 120
 
