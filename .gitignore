@@ -13,3 +13,19 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+/tags
+/coverage
+/config/database.yml
+/public/system
+/public/assets
+/public/publish
+/vendor/gems
+.idea
+.DS_Store
+
+*.swp
+.DS_Store
+
+.ruby-gemset
+.ruby-version
