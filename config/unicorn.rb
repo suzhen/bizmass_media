@@ -10,8 +10,8 @@ rails_env = ENV["RAILS_ENV"] || "production"
 preload_app true
 working_directory Rails.root
 pid "#{Rails.root}/tmp/pids/unicorn.pid"
-stderr_path "#{Rails.root}/log/unicorn.log"
-stdout_path "#{Rails.root}/log/unicorn.log"
+stderr_path "#{Rails.root}/log/unicorn.stderr.log"
+stdout_path "#{Rails.root}/log/unicorn.stdout.log"
 
 listen 5000, :tcp_nopush => false
 
