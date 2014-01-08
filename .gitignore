@@ -20,6 +20,7 @@
 /public/system
 /public/assets
 /public/publish
+/public/uploads
 /vendor/gems
 .idea
 .DS_Store
