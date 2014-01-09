@@ -12,8 +12,8 @@ BizmassMedia::Application.routes.draw do
  
   mount API => '/'
   
-  if Rails.env.staging? || Rails.env.development?
+  #if Rails.env.staging? || Rails.env.development?
     mount GrapeSwaggerRails::Engine, at: '/swagger'
-  end 
+  #end 
   
 end
