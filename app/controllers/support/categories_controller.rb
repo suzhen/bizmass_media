@@ -17,7 +17,7 @@ class Support::CategoriesController < ApplicationController
 
    def show
     @category = Category.find(params[:id])
-
+    @albums_arr = @category.albums.in_groups_of(3)
     respond_to do |format|
       format.html # show.html.erb
     end

@@ -3,5 +3,10 @@
     .alert.alert-success#notice= notice
 
 %p
-  %b Name:
+  %b 名称:
   = @category.name
+- @albums_arr.each do |albums|
+  .row
+    - albums.each do |album|
+      - if album.present?
+        = render "albums",:album=>album
