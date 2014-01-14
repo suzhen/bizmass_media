@@ -3,5 +3,5 @@ class Album < ActiveRecord::Base
   belongs_to :category
   validates :name,:category,:presence=>true
   mount_uploader :cover,CoverUploader
-  has_many :materials
+  has_many :materials, dependent: :destroy
 end
