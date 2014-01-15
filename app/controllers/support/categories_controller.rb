@@ -60,7 +60,7 @@ class Support::CategoriesController < ApplicationController
     @category.destroy
 
     respond_to do |format|
-      format.html { redirect_to Categorys_url }
+      format.html { redirect_to categorys_url }
     end
   end
 
