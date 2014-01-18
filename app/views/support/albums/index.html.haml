@@ -3,6 +3,7 @@
     %tr
       %th 名称
       %th 分类
+      %th 性质
       %th 封面
       %th
       %th
@@ -12,6 +13,7 @@
       %tr
         %td= album.name
         %td= album.category.name
+        %td= album.effect
         %td= image_tag album.cover_url(:thumb)
         %td= link_to '显示', album
         %td= link_to '编辑', edit_album_path(album)
