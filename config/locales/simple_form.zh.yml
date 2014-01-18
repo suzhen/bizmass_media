@@ -32,8 +32,10 @@ zh:
            name: '名称'
            category: '分类'
            cover: '封面'
+           effect: '类型'
        material:
            description: '描述'
            image: '图片'
            video: '视频'
            album: '图集'
+           poster: '视频封面'

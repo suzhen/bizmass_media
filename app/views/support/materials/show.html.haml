@@ -7,7 +7,10 @@
   = @material.description
 %p
   %b 图片:
-  = @material.image
+  = image_tag @material.image.url
+%p
+  %b 视频封面:
+  =  image_tag @material.poster.url
 %p
   %b 视频:
   = @material.video

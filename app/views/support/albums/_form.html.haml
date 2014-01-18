@@ -5,6 +5,9 @@
 
   .form-inputs
     = f.input :name
+ 
+  .form-inputs
+    = f.input :effect,collection:[['照片', 'photo'] ,['视频','video']]
 
   .form-inputs
     = f.input :cover,as: :file

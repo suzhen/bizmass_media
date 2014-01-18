@@ -11,7 +11,7 @@ class VideoUploader < CarrierWave::Uploader::Base
 
   
   def extension_white_list
-    %w(mp4 avi rm)
+    %w(mp4 webm ogg)
   end
 
 

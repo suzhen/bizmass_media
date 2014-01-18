@@ -4,6 +4,7 @@ class CreateMaterials < ActiveRecord::Migration
       t.text :description
       t.string :image
       t.string :video
+      t.string :poster
       t.references :album
       t.integer :position
       t.timestamps

@@ -13,6 +13,7 @@ module BizmassMedia
            expose :cover do |album|
            		album.cover_url(:normal)
            end
+           expose :effect
 		end
 
 		class Material < Grape::Entity
@@ -20,7 +21,13 @@ module BizmassMedia
 			expose :description
 			expose :image do |material|
            		material.image_url(:normal)
-           end
+            end
+            expose :video do |material|
+           		material.video_url
+            end
+            expose :poster do |material|
+           		material.poster_url(:normal)
+            end
 		end
 
 		class Meta < Grape::Entity
