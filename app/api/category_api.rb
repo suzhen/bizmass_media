@@ -14,7 +14,9 @@ module BizmassMedia
           route_param :id do
             get "/albums" do
                category = Category.find params[:id]
+
                albums = category.albums
+               albums = Album.where("1=1") if category.whole
                if params[:page].present?
                  albums = category.albums.page(params[:page]).per_page(page_size)
                  page_count = albums.length

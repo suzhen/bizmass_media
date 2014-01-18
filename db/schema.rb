@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140118084850) do
+ActiveRecord::Schema.define(:version => 20140118144555) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20140118084850) do
     t.integer "lft"
     t.integer "rgt"
     t.integer "depth"
+    t.integer "postion",   :default => 0
+    t.boolean "whole",     :default => false
   end
 
   add_index "categories", ["lft"], :name => "index_categories_on_lft"
