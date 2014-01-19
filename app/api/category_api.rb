@@ -17,12 +17,13 @@ module BizmassMedia
 
                albums = category.albums
                albums = Album.where("1=1") if category.whole
+               count = albums.count
                if params[:page].present?
-                 albums = category.albums.page(params[:page]).per_page(page_size)
+                 albums = albums.page(params[:page]).per_page(page_size)
                  page_count = albums.length
                end
                
-               meta = OpenStruct.new :count=>albums.count,:page_count=> page_count||albums.count
+               meta = OpenStruct.new :count=>count,:page_count=> page_count||albums.count
                present :data, albums, with: BizmassMedia::APIEntities::Album
                present :meta, meta, with: BizmassMedia::APIEntities::Meta
             end
