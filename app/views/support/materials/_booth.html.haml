@@ -1,9 +1,15 @@
 .col-sm-6.col-md-4
   .thumbnail
-    = image_tag material.image.url(:thumb)
+    - if photogenic?(material)
+      = image_tag material.image.url(:thumb)
+    - else
+      = link_to image_tag(material.poster.url(:thumb)),"#",:onclick=>"play_video('#{material.video}');$('#videoModal').modal('show')" 
   .caption
     %p 
-      = "属于#{material.album.name}图集"
+      - if photogenic?(material)
+        = "属于#{material.album.name}图集（相片）"
+      - else
+        = "属于#{material.album.name}图集（视频）"
     %p
       = material.description
     %p

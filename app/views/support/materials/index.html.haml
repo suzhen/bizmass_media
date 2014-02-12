@@ -6,3 +6,15 @@
 .row
   = paginate @materials, :theme => 'twitter-bootstrap-3'
 
+#videoModal.modal.fade{:tabindex=>"-1",:role=>"dialog","aria-labelledby"=>"","aria-hidden"=>"true"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{:type=>"button","data-dismiss"=>"modal","aria-hidden"=>"true"} &times;
+      .modal-body
+        %div
+          %video#materialVideo{:style=>"border:1px solid red;",:width=>375}
+            %source{}
+      .modal-footer
+  	    
+    

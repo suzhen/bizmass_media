@@ -15,3 +15,4 @@
 //= require_tree .
 //= require bootstrap
 //= require holder
+//= require jquery.video-ui

@@ -20,13 +20,13 @@ module BizmassMedia
 			expose :id
 			expose :description
 			expose :image do |material|
-           		material.image_url(:normal)
+           		material.image_url #(:normal)
             end
             expose :video do |material|
            		material.video_url
             end
             expose :poster do |material|
-           		material.poster_url(:normal)
+           		material.poster_url  #(:normal)
             end
 		end
 
