@@ -5,5 +5,5 @@ class Material < ActiveRecord::Base
   mount_uploader :video,VideoUploader
   mount_uploader :poster,PosterUploader
   belongs_to :album
-  default_scope { order("top DESC").order("id DESC") }
+  default_scope { order("id DESC") }
 end

@@ -7,6 +7,7 @@
 %p
   %b 图集名称:
   = @album.name
+  = "[已置顶]" if @album.top
 %p
   %b 图集分类:
   = @album.category.name
@@ -15,6 +16,8 @@
   = @album.effect
 %p
   %b 图集素材:
+
+  
 - @materials_arr.each do |materials|
   .row
     - materials.each do |material|

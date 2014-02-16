@@ -17,6 +17,7 @@ module BizmassMedia
 
                albums = category.albums
                albums = Album.where("1=1") if category.whole
+               albums = albums.order("top DESC").order("id DESC")
                count = albums.count
                if params[:page].present?
                  albums = albums.page(params[:page]).per_page(page_size)
