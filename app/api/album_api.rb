@@ -16,7 +16,7 @@ module BizmassMedia
           route_param :id do
             get "/materials" do
                ablum = Album.find(params[:id])
-               materials = ablum.materials
+               materials = ablum.materials.order("top DESC").order("id DESC")
                meta = OpenStruct.new :count=>materials.count
                present :data,materials, with: BizmassMedia::APIEntities::Material 
                present :meta, meta, with: BizmassMedia::APIEntities::Meta
