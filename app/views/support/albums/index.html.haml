@@ -5,6 +5,7 @@
       %th 分类
       %th 性质
       %th 封面
+      %th 是否置顶
       %th
       %th
       %th
@@ -15,6 +16,7 @@
         %td= album.category.name
         %td= album.effect
         %td= image_tag album.cover_url(:thumb)
+        %td= "置顶" if album.top
         %td= link_to '显示', album
         %td= link_to '编辑', edit_album_path(album)
         %td= link_to '删除', album, :method => :delete, :data => { :confirm => '确定删除吗？' }
