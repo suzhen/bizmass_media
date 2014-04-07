@@ -75,4 +75,13 @@ class Support::AlbumsController < ApplicationController
       format.html { redirect_to albums_url }
     end
   end
+
+  def recommend
+    @albums = Album.where(:recommend=>true).page params[:page]
+
+    respond_to do |format|
+      format.html # index.html.erb
+    end
+  end
+
 end

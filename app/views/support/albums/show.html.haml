@@ -8,6 +8,7 @@
   %b 图集名称:
   = @album.name
   = "[已置顶]" if @album.top
+  = "[已推荐]" if @album.recommend
 %p
   %b 图集分类:
   = @album.category.name
