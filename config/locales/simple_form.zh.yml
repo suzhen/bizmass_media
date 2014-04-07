@@ -32,6 +32,7 @@ zh:
            name: '名称'
            category: '分类'
            cover: '封面'
+           pcover: '封面缩略图'
            effect: '类型'
        material:
            description: '描述'
