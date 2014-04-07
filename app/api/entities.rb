@@ -13,6 +13,9 @@ module BizmassMedia
            expose :cover do |album|
            		album.cover_url(:normal)
            end
+           expose :preview_cover do |album|
+              album.cover_url(:preview)
+           end
            expose :effect
 		end
 

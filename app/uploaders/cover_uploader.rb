@@ -14,6 +14,10 @@ class CoverUploader < CarrierWave::Uploader::Base
           process :resize_to_fit => [145, 90]
    end
 
+  version :preview do
+           process :resize_to_fit => [130, 100]
+  end
+
   version :normal do
          #process :cover_crop
          process :resize_to_fill => [290,179]
