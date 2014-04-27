@@ -11,3 +11,4 @@
 
   .form-actions
     = f.button :submit,:class=>"btn btn-default"
+    = link_to '删除', @material, :method => :delete, :data => { :confirm => '确定删除吗?' },:class=>"btn btn-default",:role=>"button"

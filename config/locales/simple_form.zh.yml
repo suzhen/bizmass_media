@@ -34,6 +34,8 @@ zh:
            cover: '封面'
            pcover: '封面缩略图'
            effect: '类型'
+           top: '置顶'
+           recommend: '推荐'
        material:
            description: '描述'
            image: '图片'

@@ -3,5 +3,5 @@
     = image_tag album.cover.url(:thumb)
   .caption
     %p
-      = album.name
+      = link_to album.name+"(#{album.effect})",album
     
