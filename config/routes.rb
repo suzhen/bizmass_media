@@ -10,6 +10,8 @@ BizmassMedia::Application.routes.draw do
     resources :materials,module:'support'
     get "recommend_albums" => "support/albums#recommend"
   end
+
+  get "/search_materials" => "support/materials#index"
  
   mount API => '/'
   

@@ -4,7 +4,11 @@ class Support::MaterialsController < ApplicationController
   # GET /materials
   # GET /materials.json
   def index
-    @materials = Material.page params[:page]
+    if params[:album_name].present?
+      @materials = Material.where("album_id in (?)",Album.where("name like ?","%#{params[:album_name]}%").select(:id)).page params[:page]
+    else
+      @materials = Material.page params[:page]
+    end
     @materials_arr = @materials.in_groups_of(3)
     respond_to do |format|
       format.html # index.html.erb
@@ -82,4 +86,6 @@ class Support::MaterialsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 end
