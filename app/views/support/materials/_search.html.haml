@@ -1,0 +1,9 @@
+= form_tag("/search_materials",:method=>"get") do |f|
+  %table
+    %tr
+      %td{:style=>"width:80px"}
+        = "图集名称：" 
+      %td
+        = text_field_tag :album_name,params[:album_name] 
+      %td
+        = submit_tag "查询",:class=>"btn" 

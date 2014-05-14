@@ -1,7 +1,9 @@
 # encoding: utf-8
 class Support::CategoriesController < ApplicationController
    before_filter :authenticate_user!
+
    def index
+    
        @categories = Category.all
        respond_to do |format|
          format.html 
@@ -60,7 +62,7 @@ class Support::CategoriesController < ApplicationController
     @category.destroy
 
     respond_to do |format|
-      format.html { redirect_to categorys_url }
+      format.html { redirect_to categories_url }
     end
   end
 

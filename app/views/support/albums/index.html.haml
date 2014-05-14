@@ -14,7 +14,7 @@
     - @albums.each do |album|
       %tr
         %td= album.name
-        %td= album.category.name
+        %td= album.category.name if album.category.present?
         %td= album.effect
         %td= image_tag album.cover_url(:thumb)
         %td= "置顶" if album.top
